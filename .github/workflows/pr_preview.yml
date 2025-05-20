@@ -1,8 +1,7 @@
-name: Deploy to GitHub Pages
+name: PR Preview
 
 on:
-  push:
-    branches: [ main ]
+  pull_request:
 
 permissions:
   contents: write
@@ -12,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy preview
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+          publish_branch: gh-pages-pr
+          destination_dir: pr-${{ github.event.number }}
