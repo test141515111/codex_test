@@ -1,0 +1,33 @@
+# .github/workflows/run-tetris.yml
+# -------------------------------------------------
+# GitHub Actions 上で tetris.py を実行するだけの最小構成
+# -------------------------------------------------
+name: Run Tetris
+
+on:
+  workflow_dispatch:   # 手動実行したい場合
+  push:                # main ブランチに push されたら自動実行
+    branches: [ main ]
+
+jobs:
+  run-tetris:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ソースをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python をセットアップ（3.12）
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 依存パッケージをインストール（requirements.txt があれば）
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install --no-cache-dir -r requirements.txt
+          fi
+
+      - name: tetris.py を実行
+        run: |
+          python tetris.py
