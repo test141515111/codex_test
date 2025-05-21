@@ -2,21 +2,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #000;
-    color: #fff;
+    min-height: 100vh;
+    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
 }
 
-canvas {
-    background: #111;
-    border: 1px solid #555;
+form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-#score {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
+input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+}
+
+#result {
+    margin-top: 1rem;
 }

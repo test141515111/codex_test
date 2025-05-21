@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris</title>
+    <title>Fortune LLM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="tetris" width="200" height="400"></canvas>
-    <div id="score">0</div>
-    <script src="tetris.js"></script>
+    <form id="fortuneForm">
+        <input type="text" id="name" placeholder="名前を入力" required>
+        <button type="submit">占う</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
 </body>
 </html>
