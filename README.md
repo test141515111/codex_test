@@ -26,4 +26,14 @@ Pull requests automatically build a preview of the site using a separate `gh-pag
 ## Fortune LLM
 The `fortune-llm` directory contains a small web app that calls the OpenAI API to generate a daily fortune. To try it locally, put your API key in `fortune-llm/script.js` and open `fortune-llm/index.html` in your browser.
 
+### Setting your API key
+
+Edit `fortune-llm/script.js` and replace the empty string assigned to `apiKey` with your own OpenAI API key:
+
+```javascript
+const apiKey = 'sk-...';
+```
+
+Alternatively you can expose the key at runtime by assigning it to `window.OPENAI_API_KEY` before the script is loaded.
+
 Changes pushed to `main` are deployed by the workflow in `.github/workflows/deploy.yml`, publishing this folder to GitHub Pages together with the rest of the site.
