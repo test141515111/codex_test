@@ -1,9 +1,10 @@
 # codex_test
 
-This repository contains a simple Tetris game implemented with HTML, CSS and JavaScript. The game can be played directly in the browser.
+This repository contains a simple Tetris game implemented with HTML, CSS and JavaScript. The game can be played directly in the browser. A small Puyo Puyo style puzzle game is also included.
 
 ## Development
-Open `index.html` in a web browser to start playing.
+Open `index.html` in a web browser to start playing Tetris.
+Open `puyo.html` to try the Puyo Puyo style game.
 
 ### Using the fortune teller demo
 
